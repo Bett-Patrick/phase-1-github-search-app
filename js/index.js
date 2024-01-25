@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             e.preventDefault()
             let searchInput = document.querySelector("#search").value
             url = `https://api.github.com/search/users?q=${searchInput}`
+            document.querySelector("#user-list").innerHTML = ""
             fetchUsers(url)
         })
     }
@@ -26,16 +27,17 @@ document.addEventListener("DOMContentLoaded", ()=>{
             users.forEach((userObject)=>{
                 console.log(userObject.login)
                 console.log(userObject.repos_url)
-                renderUsers(userObject.login)
+                renderMatchingUsers(userObject.login)
                 // renderRepos(userObject.repos_url)
             })
         })
     } 
 
-    function renderUsers(user){
-        // document.querySelector("#user-list").innerHTML = ""
+    function renderMatchingUsers(user){
+        
         const userList = document.querySelector("#user-list")
         const userContainer = document.createElement("li")
+        userContainer.className = "user-container"
         userContainer.textContent = user
         userList.appendChild(userContainer)
     }
