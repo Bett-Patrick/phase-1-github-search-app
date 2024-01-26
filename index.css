@@ -1,3 +1,4 @@
+
 *{
   padding: 0;
   margin: 0;
@@ -5,8 +6,11 @@
 }
 body{
   width: 100%;
+  min-width: 600px;
 }
 #main {
+  width: 100vw;
+  min-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,6 +52,8 @@ h2{
 }
 #github-container {
   display: flex;
+  justify-content: center;
+  min-width: 450px;
   border: rgb(65, 34, 94) 3px solid;
   width: 90vw;
   padding: 30px 0 30px 0;
@@ -58,20 +64,80 @@ h2{
 ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
 }
 .user-container{
+  display: flex;
   width: 300px;
-  height: 100px;
+  height: 150px;
   border: #000 2px solid;
   padding: 5px;
+  border: 3px solid rgb(65, 34, 94);
+  color: rgb(65, 34, 94);
+  border-radius: 10px;
+  opacity: 90%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  box-shadow: -5px 5px rgb(65, 34, 94);
+  background-color: #ebd8d8;
+}
+.user-container img{
+  margin: 3px 15px 3px 3px;
+  border-radius: 10px;
+}
+#avatar-name{
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+.user-container a{
+  margin-top: 5px;
+  color: rgb(14, 163, 222);
+  margin: 10px 0 25px 0;
+  background-color: rgb(65, 34, 94);
+  padding: 5px;
+  border-radius: 7px;
+}
+#repos-btn{
   background-color: rgb(65, 34, 94);
   color: #fff;
-  border-radius: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 7px;
+  height: 30px;
   font-weight: bold;
-  opacity: 90%;
-  box-shadow: -5px 5px grey;
+  font-size: 18px;
+}
+.owner{
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+.repo-container{
+  display: flex;
+  width: 80%;
+  height: 180px;
+  box-shadow: -5px 5px 5px rgb(65, 34, 94);
+  background-color: #ebd8d8;
+  border: 3px solid rgb(65, 34, 94);
+  border-radius: 28px;
+  min-width: 600px;
+  overflow: hidden;
+}
+.repo-container img{
+  /* border-radius: 5px; */
+}
+.flex-details{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin: 5px 10px 20px 5px;
+}
+.flex-details strong{
+  font-size: 18px;
+  color: rgb(65, 34, 94);
+}
+.flex-details p{
+  margin-bottom: 5px;
 }
